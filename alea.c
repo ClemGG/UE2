@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "alea.h"
 
-int main(){
+
+
+int alea(){
 
 	srand(time(NULL));
 	int nbgen = rand()%3+1;

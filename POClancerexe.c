@@ -3,6 +3,6 @@
 
 int main(void){
 system("clear");
-system("testascii");
+system("display C:\\Ressources\ex1.bmp");
 return 0;
 }
