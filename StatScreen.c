@@ -3,20 +3,27 @@
 #include <time.h>
 #include "Default.c"
 
-int main(){
+
+int StatScreen(){
 	// Vide l'ecran
 	system("clear");
-	// Ventrage de l'image en Y
+	// Centrage de l'image en Y
 	ySlide(1);
 	// Affiche fichier.bmp
 	printFile('i',rng(3),1);
 	printf("\n\033[6B");
+
 	// Exit processus en cas de touche 'q'
 	char c;
-	while(c != 'q'){
+	while(c == 0){
 		c = getchar();
+	// Vide l'ecran
+	if((c=getchar()) != 0){
+		printf("\033[2J");
+
 	}
-	// Vide l'ecran avant
-	system("clear");
+
+	}
+
 	return 0;
 }

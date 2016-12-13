@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void){
+int Compteur(){
 
 int compteur = 10;
 
