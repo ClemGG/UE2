@@ -1,9 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "Default.c"
 
-int main(void){
+int Compteur(){
 
 int compteur = 10;
 

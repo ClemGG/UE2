@@ -4,7 +4,6 @@
 #include "Default.c"
 
 
-
 int StatScreen(){
 	// Vide l'ecran
 	system("clear");
@@ -13,13 +12,18 @@ int StatScreen(){
 	// Affiche fichier.bmp
 	printFile('i',rng(3),1);
 	printf("\n\033[6B");
+
 	// Exit processus en cas de touche 'q'
 	char c;
 	while(c == 0){
 		c = getchar();
-		printf("\033[1A");
+	// Vide l'ecran
+	if((c=getchar()) != 0){
+		printf("\033[2J");
+
 	}
-	// Vide l'ecran avant
-	system("clear");
+
+	}
+
 	return 0;
 }

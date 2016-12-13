@@ -1,0 +1,8 @@
+#ifndef STATSCREEN_H_INCLUDED
+#define STATSCREEN_H_INCLUDED
+
+
+int StatScreen();
+
+#endif //STATSCREEN_H_INCLUDED
+
