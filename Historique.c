@@ -2,7 +2,14 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void){
+void Historique(int Ecran, int parametre);
+
+int main(){
+
+	Historique(1,1);
+}
+
+void Historique(int Ecran, int parametre){
 
 	FILE* fichier = NULL;
 	fichier = fopen("Historique.txt","w+");
@@ -18,10 +25,13 @@ int main(void){
 	if(fichier != NULL){
 
 		fputs(a, fichier);
-		fclose(fichier);
 
 		int b = fgetc(fichier);
 		printf("%d\n",b);
 
 	}
+
+	fprintf(fichier," Ecran:%d Parametre:%d\n",Ecran, parametre);
+	fclose(fichier);
+
 }
