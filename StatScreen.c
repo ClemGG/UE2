@@ -4,7 +4,7 @@
 #include "Default.c"
 
 
-int StatScreen(){
+int main(){
 	// Vide l'ecran
 	system("clear");
 	// Centrage de l'image en Y

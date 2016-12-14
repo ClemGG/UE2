@@ -30,6 +30,7 @@ int main(){
 		j = CENTER;
 		loadingBar();
 	}
+
 	return 0;
 }
 

@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <time.h>
 
-void Historique(int Ecran, int parametre);
+void Historique(int numTerm, int parametre);
 
 int main(){
 
-	Historique(1,1);
+	Historique(1,2);
 }
 
-void Historique(int Ecran, int parametre){
+void Historique(int numTerm, int parametre){
 
 	FILE* fichier = NULL;
 	fichier = fopen("Historique.txt","w+");
@@ -31,7 +31,7 @@ void Historique(int Ecran, int parametre){
 
 	}
 
-	fprintf(fichier," Ecran:%d Parametre:%d\n",Ecran, parametre);
+	fprintf(fichier," TermSaver n°:%d, Parametre:%d\n",numTerm, parametre);
 	fclose(fichier);
 
 }
