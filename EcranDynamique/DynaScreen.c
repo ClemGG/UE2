@@ -11,6 +11,7 @@ void loadingBar();
 void tUpdate();
 
 int main(){
+	char ctrl;
 	char c;
 	int i, j = CENTER;
 	system("clear");

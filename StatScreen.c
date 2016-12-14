@@ -8,7 +8,7 @@ int main(){
 	// Vide l'ecran
 	system("clear");
 	// Centrage de l'image en Y
-	ySlide(1);
+	xySlide(20, 13);
 	// Affiche fichier.bmp
 	printFile('i',rng(3),1);
 	printf("\n\033[6B");
