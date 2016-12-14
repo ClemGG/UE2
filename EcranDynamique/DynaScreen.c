@@ -15,9 +15,12 @@ int main(){
 	int i, j = CENTER;
 	system("clear");
 	xySlide(0,-9);
-	printFile('c',0,28);
-	printFile('c',0,40);
+
 	while(c == 0){
+
+		printFile('c',0,33);
+		printFile('c',0,44);
+
 		tUpdate();
 		for(i=0; i<6; i++){
 			if(i == 2 || i == 4){j++;}
@@ -50,4 +53,5 @@ void loadingBar(){
 		sleep(1);
 	}
 	printf("\n\033[16A");
+	printf("\033[2J");
 }
