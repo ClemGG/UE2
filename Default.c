@@ -1,3 +1,10 @@
+/*
+
+x/ySlide Values are CHANGED !
+
+*/
+
+
 #include "Default.h"
 
 // Affiche un certain fichier a l'ecran
@@ -23,16 +30,18 @@ void printFile(char type, int fileNum, int xPosition){
 			}
 			// Imprime un "X" lorsque c = '1'
 			else if(c == '1'){
-				printf("%c", ASCII);
+///				printf("%c", ASCII);
+				printf("*");
 			}
 			// Recentrage a l'ecran de la nouvelle ligne (en cas de 'retour a la ligne')
 			else if(c == '\n'){
 				printf("\n");
-				xSlide(xPosition);
+				xySlide(xPosition,0);
 			}
 		}
 		// Fermeture du fichier
 		fclose(file);
+		xySlide(0,6);
 	// Imprime un message d'erreur dans le cas ou le fichier contient aucun caracteres
 	}else{
 		printf("Cannot print file : No file with such name");
@@ -40,14 +49,28 @@ void printFile(char type, int fileNum, int xPosition){
 }
 
 // Fonction responsable du centrage de l'ecran en X
-void xSlide(int x){
-	if(x == 0){/* No Slide */}
-	else if(x == 1){printf("\033[30C");}
-}
-// Fonction responsable du centrage de l'ecran en Y
-void ySlide(int y){
-	if(y == 0){/* No Slide */}
-	else if(y == 1){printf("\033[6B");}
+void xySlide(int x, int y){
+	int i;
+	if(x >= 0){
+		for(i=0; i<x; i++){
+			printf("\033[1C");
+		}
+	}else{
+		x = -x;
+		for(i=0; i<x; i++){
+			printf("\033[1D");
+		}
+	}
+	if(y >= 0){
+		for(i=0; i<y; i++){
+			printf("\033[1A");
+		}
+	}else{
+		y = -y;
+		for(i=0; i<y; i++){
+			printf("\033[1B");
+		}
+	}
 }
 // Generateur random de int
 int rng(int maxVal){
