@@ -5,7 +5,7 @@
 int main(){
 
 	system("clear");
-	printFile('i',0,0);
+	printFile('i',5,0);
 	while(1){
 	}
 }
