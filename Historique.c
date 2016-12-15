@@ -14,16 +14,16 @@ Historique(1,2);
 void Historique(int numTerm, int parametre){
 //On crée et ouvre un fichier pour y stocker l'historique
 	FILE* fichier = NULL;
-	fichier = fopen("Historique.txt","r+");
+	fichier = fopen("Historique.txt","a+");
 
-	char* a;
 //On initialise une variable pour y écrire ce qu'il y a dans la mémoire tampon
+	char* a;
 	char buffer[256];
 //On initialise à 0
 	time_t timestamp = time(NULL);
 //On écrit dans a la date et l'heure (format paramétrable)
-	strftime(buffer, sizeof(buffer), "\n%A %d %B %Y - %X", localtime(&timestamp));
-	a =("%s\n", buffer);
+	strftime(buffer, sizeof(buffer), "%A %d %B %Y - %X", localtime(&timestamp));
+	a =("%s", buffer);
 
 // On place dans le fichier texte la valeur a
 if(fichier != NULL){
