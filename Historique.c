@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <time.h>
 
-<<<<<<< HEAD
 void Historique(int numTerm, int parametre);
 
 int main(){
@@ -12,17 +11,14 @@ int main(){
 
 void Historique(int numTerm, int parametre){
 
-=======
 //On initialise chaque paramètre de la fonction
 
 void Historique(int numTerm, int parametre){
 //On crée et ouvre un fichier pour y stocker l'historique
->>>>>>> 402db7a1774bceb89eb575f500535c7aee7d38ef
 	FILE* fichier = NULL;
 	fichier = fopen("Historique.txt","w+");
 
 	char* a;
-<<<<<<< HEAD
 
 	char buffer[256];
 	time_t timestamp = time(NULL);
@@ -31,7 +27,7 @@ void Historique(int numTerm, int parametre){
 	a =("%s\n", buffer);
 
 	if(fichier != NULL){
-=======
+
 //On initialise une variable pour y écrire ce qu'il y a dans la mémoire tampon
 	char buffer[256];
 //On initialise à 0
@@ -48,7 +44,6 @@ void Historique(int numTerm, int parametre){
 	}
 
 	fprintf(fichier," TermSaver n°:%d, Parametre:%d\n",numTerm, parametre);
-=======
 //On inscrit ensuite chacun des paramètres affectés aux deux variables via les exécutables
 	fprintf(fichier," TermSaver n°:%d, Parametre:%d\n",numTerm, parametre);
 //On ferme le fichier pour enregistrer
