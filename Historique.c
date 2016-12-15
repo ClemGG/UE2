@@ -2,16 +2,12 @@
 #include <stdio.h>
 #include <time.h>
 
-void Historique(int numTerm, int parametre);
-
-int main(){
-Historique(1,2);
-}
+void Historique(int numTerm, int parametre, int Parametre);
 
 
 //On initialise chaque paramètre de la fonction
 
-void Historique(int numTerm, int parametre){
+void Historique(int numTerm, int parametre, int Parametre){
 //On crée et ouvre un fichier pour y stocker l'historique
 	FILE* fichier = NULL;
 	fichier = fopen("Historique.txt","a+");
@@ -33,7 +29,12 @@ if(fichier != NULL){
 		printf("%d\n",b);
 
 //On inscrit ensuite chacun des paramètres affectés aux deux variables via les exécutables
-	fprintf(fichier," TermSaver n°:%d, Parametre:%d\n",numTerm, parametre);
+	if(numTerm == 2 || numTerm == 3){
+	fprintf(fichier," TermSaver n°:%d, Parametre:%dx%d\n",numTerm,parametre,Parametre);
+	}
+	else if (parametre >= 1 && parametre <= 3 && numTerm == 1){
+	fprintf(fichier," TermSaver n°:%d, Parametre:i%d.bmp\n",numTerm,parametre);
+	}
 //On ferme le fichier pour enregistrer
 	fclose(fichier);
 }
