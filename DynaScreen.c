@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Default.c"
+#include "Historique.c"
 #define ACTUALISATION 7
 #define CENTER 6
 
@@ -12,6 +13,8 @@ void tUpdate();
 
 int main(){
 	char c;
+	int r;
+	int P;
 	int i, j = CENTER;
 	system("clear");
 	xySlide(0,-9);
@@ -28,9 +31,12 @@ int main(){
 			j++;
 		}
 		j = CENTER;
+		r = CENTER;
+		P = CENTER;
+		Historique(2,r,P);
+
 		loadingBar();
 	}
-
 	return 0;
 }
 

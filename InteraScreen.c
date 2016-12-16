@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "Default.c"
+#include "Historique.c"
 
 int main(){
 
@@ -10,7 +12,7 @@ int main(){
 
 	int AvionX=rng(70);
 	int AvionY=-rng(25);
-
+	Historique(3,AvionX,AvionY);
 	xySlide(0,AvionY);
 	printFile('a',rng(3),AvionX);
 

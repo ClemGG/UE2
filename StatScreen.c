@@ -7,6 +7,7 @@
 int main(){
 	//On génère un nombre aléatoire de paramètre
 	int r = rng(3);
+	int P = 0;
 	// Vide l'ecran
 	system("clear");
 	// Centrage de l'image en Y
@@ -24,7 +25,9 @@ int main(){
 		if((c=getchar()) != 0){
 		system("clear");
 		}
+Historique(1,r,P);
+
 	}
 	return 0;
-Historique(1,r);
+
 }
