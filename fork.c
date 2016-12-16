@@ -20,8 +20,8 @@ pid_t pid;
 void child_process(void){
 
 printf("Nous entrons dans le processus fils.\n");
-sleep(1);
-printf("Le PID du processus fils est: %d.\n", (int) getpid());
+//sleep(1);
+//printf("Le PID du processus fils est: %d.\n", (int) getpid());
 
 }
 
@@ -31,5 +31,6 @@ void father_process(int child_pid){
 printf("Nous quittons le processus père.\n");
 sleep(1);
 printf("Le PID du processus père était: %d.\n", (int) getpid());
+printf("Le PID du processus fils est: %d.\n", (int) child_pid);
 
 }
